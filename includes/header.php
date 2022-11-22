@@ -12,13 +12,46 @@
     <title>Registrate</title>
 </head>
 <body>
-    <nav class="navbar navbar-dark" style="background-color: #303841;">
-      <div class="contenedor">
-            <img class="logo" src="img/twitter_header_photo_1.png" alt="">
-      </div>
-      <div class="contenedor">
-        <a class="navbar-brand" href="index.php">Home</a>
-        <a class="navbar-brand" href="index.php">Sobre Nosotros</a>
-        <a class="navbar-brand contacto" href="index.php">Contactanos</a>
-      </div>
-    </nav>
+
+<nav>
+    <img src="img/twitter_header_photo_1.png" alt="logo" class="logo">
+    <div class="navbar-left">
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/">Sobre nosotros</a>
+        </li>
+        <li>
+          <a href="/">Contactanos</a>
+        </li>
+      </ul>
+    </div>
+
+      <div class="mobile-menu inactivo">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="/">Contactanos</a>
+          </li>
+        </ul>
+    
+        <ul>
+          <li>
+            <a href="/" class="sign-out">Sign out</a>
+          </li>
+        </ul>
+      </div> 
+      
+      <img src="img/icon_menu.svg" alt="menu" class="menu">
+  </nav>
+
+</body>
+
+
