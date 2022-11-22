@@ -42,3 +42,29 @@ header{
     width: 100%;
     text-align: center;
 }
+
+.navbar{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navbar-brand{
+    margin-right: 50px;
+}
+
+.logo{
+    margin-left: 5px;
+    width: 180px;
+}
+
+.contacto{
+    padding: 6px;
+    background-color: #0098cb;
+    border-radius: 20px;
+}
+
+
+@media (max-width: 665px) {
+
+
+  }
