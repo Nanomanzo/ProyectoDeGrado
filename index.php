@@ -14,6 +14,12 @@
         <?php if (!empty($message)): ?>
             <p><?= $message?></p>
         <?php endif ?>
+        
+        <?php if(isset($_COOKIE["registrarUsuario"])) :?>
+            <p><?= $message = "usuario creado satisfactoriamente"?></p>
+        <?php endif ?>
+
+
 
         <form action="./index.php" method="post">
             <input type="email" name="email" placeholder="Ingrese su email">

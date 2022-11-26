@@ -4,6 +4,8 @@
 
     $message = "";
 
+    setcookie("registrarUsuario","Registrar Usuario",time() + 1);
+
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $sql = "INSERT INTO usuarios (email, password) VALUES (:email, :password)";
         $stmt = $conn->prepare($sql);
