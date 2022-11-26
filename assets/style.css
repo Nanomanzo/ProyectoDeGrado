@@ -172,15 +172,30 @@ nav > .mobile-menu {
 }
 
 
-.contenedor-registro-olvidoContraseña{
+.contenedor-registro-olvidoComensntraseña{
     display: grid;
 }
 
 
 .contenedor-registro-olvidoContraseña > a{
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
+/*registrarse*/
+.contenedorPrincipal-formRegistrarse{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje{
+    width: 50%;
+    min-width: 300px;
+} 
 
 
 /*sobre nosotros*/
