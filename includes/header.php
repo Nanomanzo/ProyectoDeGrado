@@ -18,13 +18,13 @@
     <div class="navbar-left">
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href="index.php">Home</a>
         </li>
         <li>
-          <a href="/">Sobre nosotros</a>
+          <a href="sobreNosotros.php">Sobre nosotros</a>
         </li>
         <li>
-          <a href="/">Contactanos</a>
+          <a href="contactanos.php">Contactanos</a>
         </li>
       </ul>
     </div>
@@ -32,22 +32,27 @@
       <div class="mobile-menu inactivo">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="index.php">Home</a>
           </li>
           <li>
-            <a href="/">Sobre nosotros</a>
+            <a href="sobreNosotros.php">Sobre nosotros</a>
           </li>
           <li>
-            <a href="/">Contactanos</a>
+            <a href="contactanos.php">Contactanos</a>
           </li>
         </ul>
     
-        <ul>
-          <li>
-            <a href="/" class="sign-out">Sign out</a>
-          </li>
-        </ul>
+        <?php 
+            if (isset($_SESSION["user_id"])):?>
+              <ul>
+                <li>
+                  <a href="./cerrarsesion.php" class="sign-out">Sign out</a>
+                </li>
+              </ul>
+        <?php endif; ?>
       </div> 
+
+
       
       <img src="img/icon_menu.svg" alt="menu" class="menu">
   </nav>

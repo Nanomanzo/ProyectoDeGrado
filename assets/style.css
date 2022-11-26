@@ -26,7 +26,7 @@ body{
     text-align: center;
 }
 
-input[type="email"], input[type="password"]{
+input[type="email"], input[type="password"], input[type="text"]{
     outline: none;
     padding: 20px;
     display: block;
@@ -35,6 +35,7 @@ input[type="email"], input[type="password"]{
     border: 1px solid #eee;
     margin: 20px auto;
     max-width: 300px;
+    font-size: var(--md);
 }
 
 input[type="submit"]{
@@ -117,6 +118,7 @@ nav > .mobile-menu {
     top: 60px;
     background-color: var(--white);
     width: calc(100% - 48px);
+    z-index: 100;
 }
     
 .mobile-menu a {
@@ -170,14 +172,160 @@ nav > .mobile-menu {
 }
 
 
+.contenedor-registro-olvidoContraseña{
+    display: grid;
+}
+
+
+.contenedor-registro-olvidoContraseña > a{
+    margin-bottom: 10px;
+}
 
 
 
+/*sobre nosotros*/
+.contenedorPrincipal-sobreNostros{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.centrarhijos-sobreNosotros{
+    width: 80%;
+}
+
+.hijosContenedorPrincipal-sobreNosotros{
+    display: flex;
+    align-items: center;
+    text-align: initial;
+    margin-bottom: 32px;
+}
+
+.hijosContenedorPrincipal-sobreNosotros > div{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.hijosContenedorPrincipal-sobreNosotros > div > p{
+    font-size: var(--lg);
+}
+
+.hijosContenedorPrincipal-sobreNosotros > div > h1{
+    margin-bottom: 16px;
+    font-weight: 900;
+}
+
+.hijosContenedorPrincipal-sobreNosotros  > img{
+    width: 40%;
+    max-width: 530px;
+}
 
 
+/*footer*/
+.contenedorPrincipal-footer{
+    width: 100%;
+    background-color: #303841;
+}
+
+.contenedorPrincipal-footer > div{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
 
 
+.contenedorPrincipal-footer > div > div{
+    width: 30%;
+}
 
+.linea-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+hr{
+    height: 6px;
+    background-color: var(--black);
+    opacity: 1;
+    border-radius: 20px;
+}
+
+.contenedorPrincipal-footer > .contenedorLogInformacion-footer{
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contenedorLogInformacion-footer > div{
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contenedorLogInformacion-footer > div > p{
+    color: var(--black);
+}
+
+.contenedorLogInformacion-footer > div > img{
+    width: 100%;
+
+}
+
+.contenedorLogInformacion-footer > .linksInformacion-footer{
+    width: auto ;
+}
+
+.linksInformacion-footer > div{
+    display: flex;
+    justify-content: flex-end;
+    width: max-content;
+}
+
+.linksInformacion-footer > div > p {
+    margin-left: 20px;
+
+}
+
+.linksInformacion-footer > div > p > a {
+    color: var(--gris-claro);
+}
+
+.linksInformacion-footer > div > p > a:hover{
+    color: var(--secundario)
+}
+
+/*footer*/
+.contenedorPrincipal-contactanos{
+    margin-top: 24px;
+}
+
+.contenedorPrincipal-contactanos > main{
+    width: 100%;
+}
+
+.contenedorPrincipal-contactanos > main > form > div > span{
+    font-size: var(--lg);
+}
+
+.contenedorPrincipal-contactanos > main > form > div > select{
+    font-size: var(--md);
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.contenedorPrincipal-contactanos > main > form > div{
+    margin-top: 16px;
+    font-size: var(--lg);
+}
+
+textarea{
+    width: 80%;
+    max-width: 660px;
+    max-height: 190px;
+    min-height: 190px;
+}
 
 
 
@@ -194,7 +342,27 @@ nav > .mobile-menu {
         display: none;
     }
     .contenedor-principal-index{
+        margin-top: 30px;
         justify-content: center;
+    }
+    .hijosContenedorPrincipal-sobreNosotros{
+        flex-direction: column-reverse;
+    }
+    .hijosContenedorPrincipal-sobreNosotros > img {
+        width: 100%;
+        margin-bottom: 36px;
+    }
+
+    .linea-footer{
+        display: none;
+    }
+
+    .contenedorPrincipal-footer > div > div{
+        width: 100%;
+    }
+
+    .linksInformacion-footer > div{
+        flex-direction: column;
     }
 }
     
