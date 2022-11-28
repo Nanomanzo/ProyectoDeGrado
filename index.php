@@ -8,18 +8,11 @@
         <img class="img-index" src="img/imagen index2.png" alt="">
     </div>
     <div class="contenedor-form-index">
-        <h1>Iniciar sesión</h1>
-
-
-        <?php if (!empty($message)): ?>
-            <p><?= $message?></p>
+        <?php if(isset($_COOKIE["registrarUsuario"])) :?>
+            <p class="alert alert-success mensaje"><?= $message = "usuario creado satisfactoriamente"?></p>
         <?php endif ?>
         
-        <?php if(isset($_COOKIE["registrarUsuario"])) :?>
-            <p><?= $message = "usuario creado satisfactoriamente"?></p>
-        <?php endif ?>
-
-
+        <h1>Iniciar sesión</h1>
 
         <form action="./index.php" method="post">
             <input type="email" name="email" placeholder="Ingrese su email">
