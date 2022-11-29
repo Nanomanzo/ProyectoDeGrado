@@ -23,8 +23,8 @@
             </div>
             <div  class="linksInformacion-footer">
                 <div>
-                    <p><a href="/includes/foother.php">Información legal</a></p>
-                    <p><a href="/includes/foother.php">Política de privacidad</a></p>
+                    <p><a href="/proyectodegrado">Información legal</a></p>
+                    <p><a href="/proyectodegrado">Política de privacidad</a></p>
                 </div>
             </div>
 
