@@ -24,6 +24,10 @@
 
 body{
     text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 input[type="email"], input[type="password"], input[type="text"]{
@@ -343,6 +347,26 @@ textarea{
     min-height: 190px;
 }
 
+/*404*/
+.contenedorPrincipal-404{
+    display: flex;
+    align-items: center;
+    background-color: var(--secundario);
+    justify-content: center;
+    padding: 60px 0px
+}
+.contenedorImagen-404{
+    display: flex;
+    justify-content: center;
+}
+.contenedorPrincipal-404 > div > img{
+    width: 90%;
+}
+.contenedorPrincipal-404 > div > p {
+    margin: 40px 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
 
 
 /*media queries*/
@@ -379,6 +403,13 @@ textarea{
 
     .linksInformacion-footer > div{
         flex-direction: column;
+    }
+    .contenedorPrincipal-404{
+        flex-direction: column;
+    }
+
+    .contenedorPrincipal-404 > div > img{
+        padding: 20px;
     }
 }
     
