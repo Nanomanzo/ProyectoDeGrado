@@ -10,14 +10,45 @@
             <p class="alert alert-danger mensaje"><?= $message?></p>
     <?php endif; ?>
     <h1>Registarte</h1>
-    <span>O <a href="./index.php">inicia sesión</a></span>
-    <form class="formRegistrarse" action="./formRegistarse.php" method="post">
-        <input type="text" name="nombre" placeholder="Ingrese su nombre">
-        <input type="text" name="apellido" placeholder="Ingrese su apellido">
-        <input type="text" name="nickname" placeholder="Ingrese su nickname">
-        <input type="email" name="email" placeholder="Ingrese su email">
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
-        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirme su contraseña">
+    <span>o <a href="./index.php">Inicia Sesión</a></span>
+    <form class="formRegistrarse needs-validation" action="./formRegistarse.php" method="post" novalidate>
+        <div>
+            <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+            <div class="valid-feedback">¡Ok válido!</div>
+            <div class="invalid-feedback">Campo requerido.</div>
+        </div>
+
+        <div>
+            <input type="text" name="apellido" placeholder="Ingrese su apellido" required>
+            <div class="valid-feedback">¡Ok válido!</div>
+            <div class="invalid-feedback">Campo requerido.</div>
+        </div>
+
+        <div>
+            <input type="text" name="nickname" placeholder="Ingrese su nickname" required>
+            <div class="valid-feedback">¡Ok válido!</div>
+            <div class="invalid-feedback">Campo requerido.</div>
+        </div>
+
+        <div>
+            <input type="email" name="email" placeholder="Ingrese su email" required>
+            <div class="valid-feedback">¡Ok válido!</div>
+            <div class="invalid-feedback">Campo requerido.</div>
+        </div>
+
+        <div>
+            <input type="password" id="password" name="password" pattern=".{6,}" placeholder="Ingrese su contraseña" required>
+            <div class="valid-feedback">¡Ok válido!</div>
+            <div class="invalid-feedback" id="error-required-pass">Campo requerido</div>
+            <div class="invalid-feedback" id="error-longitud">La contraseña debe tener minimo 6 caracteres</div>
+        </div>
+
+        <div>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirme su contraseña" required>
+            <div class="valid-feedback">¡Ok válido!</div>
+            <div class="invalid-feedback" id="error-required-conf">Campo requerido</div>
+            <div class="invalid-feedback" id="error-igualdad">La contraseña deben ser iguales</div>
+        </div>
         <input type="submit" id="enviar-formRegistrarse" value="Enviar">
     </form>
 </div>
