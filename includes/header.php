@@ -26,6 +26,9 @@
         <li>
           <a href="contactanos.php">Contactanos</a>
         </li>
+        <li>
+          <button class="modoOscuro">Modo Oscuro</button>
+        </li>
       </ul>
     </div>
 
@@ -40,6 +43,9 @@
           <li>
             <a href="contactanos.php">Contactanos</a>
           </li>
+          <li>
+            <button lass="modoOscuro">Modo Oscuro</button>
+        </li>
         </ul>
     
         <?php 
