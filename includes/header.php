@@ -27,7 +27,7 @@
           <a href="contactanos.php">Contactanos</a>
         </li>
         <li>
-          <button class="modoOscuro">Modo Oscuro</button>
+          <button class="modoOscuro"><img class="imgModoOscuro" src="img/modo-oscuro.png" alt=""></button>
         </li>
       </ul>
     </div>
@@ -35,16 +35,16 @@
       <div class="mobile-menu inactivo">
         <ul>
           <li>
-            <a href="index.php">Home</a>
+            <a class="linkMobileMenu" href="index.php">Home</a>
           </li>
           <li>
-            <a href="sobreNosotros.php">Sobre nosotros</a>
+            <a class="linkMobileMenu" href="sobreNosotros.php">Sobre nosotros</a>
           </li>
           <li>
-            <a href="contactanos.php">Contactanos</a>
+            <a class="linkMobileMenu" href="contactanos.php">Contactanos</a>
           </li>
           <li>
-            <button lass="modoOscuro">Modo Oscuro</button>
+            <button class="modoOscuro"><img class="imgModoOscuro" src="img/modo-oscuro.png" alt=""></button>
         </li>
         </ul>
     
@@ -52,7 +52,7 @@
             if (isset($_SESSION["user_id"])):?>
               <ul>
                 <li>
-                  <a href="./cerrarsesion.php" class="sign-out">Sign out</a>
+                  <a href="./cerrarsesion.php" class="linkMobileMenu sign-out">Sign out</a>
                 </li>
               </ul>
         <?php endif; ?>

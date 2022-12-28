@@ -272,6 +272,7 @@ hr{
     background-color: var(--black);
     opacity: 1;
     border-radius: 20px;
+    color: black;
 }
 
 .contenedorPrincipal-footer > .contenedorLogInformacion-footer{
@@ -375,6 +376,22 @@ textarea{
 body.modoOscuro{
     background-color: #20202c;
     color: var(--white);
+}
+
+nav .modoOscuroMenu{
+    background-color: #20202c;
+}
+
+
+
+li > .modoOscuro{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.imgModoOscuro{
+    width: 32px;
+    height: 32px;
 }
 
 
