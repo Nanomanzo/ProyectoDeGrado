@@ -12,6 +12,8 @@ menuHamburguesa.addEventListener("click", toggleBurguerMenu);
 // ocultamos o mostramos el menu de movil segun sea conveniente
 function toggleBurguerMenu() {
     mobileMenu.classList.toggle("inactivo");
+    // eliminamos el scroll para que no le sea posible al usuario desplazarce si el menu crece mas de la cuenta
+    document.body.style.overflow = (document.body.style.overflow === "hidden") ? "" : "hidden";
 }
 
 
@@ -93,6 +95,7 @@ if (location.pathname === '/ProyectoDeGrado/formRegistarse.php') {
                                                          /*Modo Oscuro*/
 // Selecciona el botón que activa/desactiva el modo oscuro
 let botonModoOscuro = document.querySelectorAll(".modoOscuro")
+let enlacesMenuMovil = document.querySelectorAll('.mobile-menu ul a');
 
 // Selecciona el elemento body para aplicar la clase de modo oscuro
 let body = document.querySelector("body")
@@ -107,6 +110,12 @@ function toggleModoOscuro() {
   body.classList.toggle("modoOscuro");
   mobileMenu.classList.toggle("modoOscuroMenu")
 
+  // Agrega la clase "linkMobileMenuModoOscuro" a cada uno de los enlaces del menú móvil
+  enlacesMenuMovil.forEach(function(enlace) {
+    enlace.classList.toggle("linkMobileMenuModoOscuro");
+    store(enlace.classList.contains("linkMobileMenuModoOscuro"))
+  });
+
   // Almacena el estado del modo oscuro en el almacenamiento local del navegador
   store(body.classList.contains("modoOscuro"))
   store(mobileMenu.classList.contains("modoOscuroMenu"))
@@ -116,16 +125,20 @@ function toggleModoOscuro() {
 function load() {
   // Obtiene el estado del modo oscuro almacenado en el almacenamiento local
   let modoOscuro = localStorage.getItem("modoOscuro")
-  let modoOscuroJMenu = localStorage.getItem("modoOscuroMenu")
+  let modoOscuroMenu = localStorage.getItem("modoOscuroMenu")
+  let modoOscuroMenuLinks = localStorage.getItem("linkMobileMenuModoOscuro")
 
   // Si el estado del modo oscuro no está almacenado, se almacena el valor predeterminado (false)
-  if (modoOscuro === undefined && modoOscuroJMenu === undefined ) {
+  if (modoOscuro === undefined && modoOscuroMenu === undefined && modoOscuroMenuLinks === undefined ) {
     store(false)
   }
   // Si el estado del modo oscuro está almacenado como "true", se agrega la clase de modo oscuro al elemento body
   else if (modoOscuro === "true"){
     body.classList.add("modoOscuro")
     mobileMenu.classList.add("modoOscuroMenu")
+    enlacesMenuMovil.forEach(function(enlace) {
+      enlace.classList.add("linkMobileMenuModoOscuro");
+    });
   }
 }
 

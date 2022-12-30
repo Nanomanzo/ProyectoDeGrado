@@ -35,13 +35,13 @@
       <div class="mobile-menu inactivo">
         <ul>
           <li>
-            <a class="linkMobileMenu" href="index.php">Home</a>
+            <a href="index.php">Home</a>
           </li>
           <li>
-            <a class="linkMobileMenu" href="sobreNosotros.php">Sobre nosotros</a>
+            <a href="sobreNosotros.php">Sobre nosotros</a>
           </li>
           <li>
-            <a class="linkMobileMenu" href="contactanos.php">Contactanos</a>
+            <a href="contactanos.php">Contactanos</a>
           </li>
           <li>
             <button class="modoOscuro"><img class="imgModoOscuro" src="img/modo-oscuro.png" alt=""></button>
