@@ -2,7 +2,7 @@
     session_start();
 
       if (isset($_SESSION["user_id"])) {
-        header('Location: /PROYECTODEGRADO/paginaPrincipal.php');
+        header('Location: /ProyectoDeGrado/paginaPrincipal.php');
     } 
  
     require "./conexion.php";
@@ -22,7 +22,7 @@
             if (!empty($results)) {
                 if ( count($results) > 0 && password_verify($_POST['password'], $results['password'])  ) {
                     $_SESSION['user_id'] = $results['id_usuario'];
-                    header('Location: /PROYECTODEGRADO/paginaPrincipal.php'); 
+                    header('Location: /ProyectoDeGrado/paginaPrincipal.php'); 
                     $message = 'usuario encontrado'; 
                 } else {
                     $message = 'Sorry, those credentials do not match';

@@ -21,7 +21,7 @@ function toggleBurguerMenu() {
 
 
                                                          /*Validar el formulario de registro*/
-if (location.pathname === '/ProyectoDeGrado/formRegistarse.php') {
+if (location.pathname === '/ProyectoDeGrado/formRegistarse.php' || location.pathname === '/ProyectoDeGrado/restaurarcontrasenavalidartoken.php') {
   // Seleccionamos el formularios
   var forms = document.getElementsByClassName('needs-validation');
   // Recorremos el formulario

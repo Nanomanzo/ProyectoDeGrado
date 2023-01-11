@@ -17,7 +17,7 @@
     
         try {
             if ($stmt->execute()) {
-                $message = "usuario creado satisfactoriamente";
+                //$message = "usuario creado satisfactoriamente";
                 header("Location: index.php");
             } else{
                 $message = "el usuario no ha sido crerado";

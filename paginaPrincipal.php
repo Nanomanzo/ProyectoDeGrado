@@ -2,7 +2,7 @@
     session_start();
     require "./includes/header.php";
     if (!isset($_SESSION["user_id"])) {
-      header('Location: /PROYECTODEGRADO/');
+      header('Location: /ProyectoDeGrado/');
     } 
 
 ?>

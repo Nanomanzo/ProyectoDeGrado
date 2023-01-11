@@ -29,11 +29,11 @@ $headers.= "To: Sitio web <sigueaprendiendoilerna@gmail.com> \r\n";
 var_dump($nombre);
 $rta = mail("sigueaprendiendoilerna@gmail.com", "Mensaje: $asunto", $body, $headers);
 
-/* if (isset($asunto)) {
-    return $message  = "mensaje enviado";
-}
- */
+
 var_dump($rta);
+
+setcookie("contactanos","contactanos",time() + 1);
+
 header("Location: index.php" );
 
 ?>

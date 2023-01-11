@@ -2,6 +2,12 @@
     require "./conexion.php";
     require "./includes/header.php";
     require "./registrarUsuario.php";
+
+    if (isset($_GET["message"])) {
+        $message = $_GET["message"];
+    } else {
+        $message = "";
+    }
 ?>
 
 <div class="contenedorPrincipal-formRegistrarse">
