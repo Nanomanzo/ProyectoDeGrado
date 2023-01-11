@@ -17,7 +17,8 @@
         $message = '';
 
          if (empty($results['email'])) {
-            $message = 'usuario no encontrado';
+            $message = 'Usuario no encontrado, regístrese con el formulario de más abajo para poder acceder a "Sigue aprendiendo"';
+            header("Location: formRegistarse.php?message=" . $message);
         } else {
             if (!empty($results)) {
                 if ( count($results) > 0 && password_verify($_POST['password'], $results['password'])  ) {
@@ -25,7 +26,9 @@
                     header('Location: /ProyectoDeGrado/paginaPrincipal.php'); 
                     $message = 'usuario encontrado'; 
                 } else {
-                    $message = 'Sorry, those credentials do not match';
+                    $message = 'Lo siento, contraseña incorrecta';
+                    $tipoMensaje = "alert-danger";
+                    header("Location: index.php?message=" . $message . "&class=" . $tipoMensaje);
                 }
         }
         }
