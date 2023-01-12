@@ -21,11 +21,18 @@
           <a href="index.php">Home</a>
         </li>
         <li>
-          <a href="sobreNosotros.php">Sobre nosotros</a>
+          <a class="sobreNosotros" href="sobreNosotros.php">Sobre nosotros</a>
         </li>
         <li>
           <a href="contactanos.php">Contactanos</a>
         </li>
+            
+        <?php 
+            if (isset($_SESSION["user_id"])):?>
+                <li>
+                  <a href="./cerrarsesion.php">Sign out</a>
+                </li>
+        <?php endif; ?>
         <li>
           <button class="modoOscuro"><img class="imgModoOscuro" src="img/modo-oscuro.png" alt=""></button>
         </li>
@@ -45,18 +52,20 @@
           </li>
           <li>
             <button class="modoOscuro"><img class="imgModoOscuro" src="img/modo-oscuro.png" alt=""></button>
-        </li>
-        </ul>
-    
-        <?php 
+          </li>
+
+          <?php 
             if (isset($_SESSION["user_id"])):?>
-              <ul>
                 <li>
-                  <a href="./cerrarsesion.php" class="linkMobileMenu sign-out">Sign out</a>
+                  <a href="./cerrarsesion.php" >Sign out</a>
                 </li>
-              </ul>
+
         <?php endif; ?>
+        </ul>
       </div> 
+
+    
+
 
 
       

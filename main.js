@@ -110,6 +110,14 @@ function toggleModoOscuro() {
   body.classList.toggle("modoOscuro");
   mobileMenu.classList.toggle("modoOscuroMenu")
 
+  if (window.location.pathname === '/ProyectoDeGrado/paginaPrincipal.php') {
+    if (document.querySelector("body").classList.contains("modoOscuro")) {
+      document.querySelector("table").style.color = "white";
+    } else {
+      document.querySelector("table").style.color = "black";
+    }
+  }
+
   // Agrega la clase "linkMobileMenuModoOscuro" a cada uno de los enlaces del menú móvil
   enlacesMenuMovil.forEach(function(enlace) {
     enlace.classList.toggle("linkMobileMenuModoOscuro");
@@ -119,6 +127,18 @@ function toggleModoOscuro() {
   // Almacena el estado del modo oscuro en el almacenamiento local del navegador
   store(body.classList.contains("modoOscuro"))
   store(mobileMenu.classList.contains("modoOscuroMenu"))
+}
+
+function cambiarColorTabla() {
+  if (document.querySelector("body").classList.contains("modoOscuro")) {
+    document.querySelector("table").style.color = "white";
+  } else {
+    document.querySelector("table").style.color = "black";
+  }
+}
+
+if (location.pathname === '/ProyectoDeGrado/paginaPrincipal.php') {
+  window.onload = cambiarColorTabla;
 }
 
 // Función que se ejecuta al cargar la página para aplicar el estado del modo oscuro almacenado en el almacenamiento local

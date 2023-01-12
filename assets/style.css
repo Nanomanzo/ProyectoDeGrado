@@ -383,7 +383,7 @@ nav .modoOscuroMenu{
 }
 
 .mobile-menu ul li a.linkMobileMenuModoOscuro{
-    color: var(--white);
+    color: var(--white) ; 
 }
 
 li > .modoOscuro{
@@ -396,7 +396,41 @@ li > .modoOscuro{
     height: 32px;
 }
 
+/*pagina principal*/
+.contenedorprincipal-paginaprincipal{
+    display: flex;
+    justify-content: space-around;
+}
 
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-paginaPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+}
+
+.contenedorFormulario-paginaPrincipal{
+    width: 870px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.elegirCategoria{
+    font-size: var(--md);
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+td {
+    vertical-align: middle;
+  }
 
 
 /*media queries*/
@@ -446,10 +480,19 @@ li > .modoOscuro{
     .contenedor-form-index{
         width: 80%;
     }
+    .coll-creacion{
+        display: none;
+    }
 }
     
 @media (min-width: 641px){
     .mobile-menu{
+        display: none;
+    }
+}
+
+@media (max-width: 726px){
+    .sobreNosotros{
         display: none;
     }
 }
