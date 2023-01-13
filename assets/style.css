@@ -430,8 +430,15 @@ li > .modoOscuro{
 
 td {
     vertical-align: middle;
-  }
+}
 
+.coll-acciones{
+    width: 5%;
+}
+
+.editar{
+    margin-bottom: 5px;
+}
 
 /*media queries*/
 @media (max-width: 640px) {

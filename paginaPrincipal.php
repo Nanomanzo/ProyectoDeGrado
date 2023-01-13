@@ -22,30 +22,23 @@
 
 
             <div>
-                <form action="save_task.php" class="formulario-paginaPrincipal" method="POST">
-                    <input type="text" name="title" class="mb-3" placeholder="Titulo" autocomplete="off" autofocus>
+                <form action="paginaprincipalguardar.php" class="formulario-paginaPrincipal" method="POST">
+                    <input type="text" name="titulo" class="mb-3" placeholder="Titulo" autocomplete="off" autofocus>
                     <div>
                         <span>Categoria</span>
-                        <select class="elegirCategoria" name="categoria">
-                            <option>Tecnologia</option>
-                            <option>Hogar</option>
-                            <option>Musica</option>
-                            <option>Moda</option>
-                            <option>Gastronomia</option>
-                            <option>Idiomas</option>
-                            <option>Alimentación</option>
-                            <option>Arte</option>
-                            <option>Casa y jardín</option>
-                            <option>Ciencia</option>
-                            <option>Comedia</option>
-                            <option>Deporte</option>
-                            <option>Educación</option>
-                            <option>Medicina</option>
-                            <option>Otro</option>
-                        </select>
+                        <?php
+                            $stmt = $conn->prepare("SELECT id_categorias, nombre_categoria FROM categorias");
+                            $stmt->execute();
+                            $categorias = $stmt->fetchAll();
+                            echo "<select class='elegirCategoria' name='categoria'>";
+                            foreach ($categorias as $categoria) {
+                                echo "<option value='" . $categoria["id_categorias"] . "'>" . $categoria["nombre_categoria"] . "</option>";
+                            }
+                            echo "</select>";
+                        ?>
                     </div>
-                    <textarea name="description" rows="2" placeholder="Descripcion" autocomplete="off"></textarea>
-                    <input type="submit" name="save_task" value="Guardar tarea">
+                    <textarea name="post" rows="2" placeholder="Descripcion" autocomplete="off"></textarea>
+                    <input type="submit" name="guardarPost" value="Guardar tarea">
                         
                 </form>
             </div>
@@ -58,7 +51,7 @@
                             <th>Descripcion</th>
                             <th class="coll-creacion">Categoria</th>
                             <th class="coll-creacion">Creracion</th>
-                            <th>Acciones</th>
+                            <th class="coll-acciones">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -82,7 +75,7 @@
                                 <td class="coll-creacion"><?php echo $row["nombre_categoria"] ?></td> 
                                 <td class="coll-creacion"><?php echo $row["fecha_publicacion"] ?></td> 
                                 <td>
-                                    <a href="./paginaprincipaleditar.php?id=<?php echo $row["id_post"] ?>" class="btn btn-secondary">
+                                    <a href="./paginaprincipaleditar.php?id=<?php echo $row["id_post"] ?>" class="editar btn btn-secondary">
                                         <i class="fa-solid fa-pencil"></i>
                                     </a>
                                     <a href="./paginaprincipaleliminar.php?id_post=<?php echo $row["id_post"] ?>" class="btn btn-danger">
