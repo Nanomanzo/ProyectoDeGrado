@@ -47,7 +47,7 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Titulo</th>
+                            <th class="coll-titulo">Titulo</th>
                             <th>Descripcion</th>
                             <th class="coll-creacion">Categoria</th>
                             <th class="coll-creacion">Creracion</th>
@@ -70,10 +70,10 @@
                             while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
 
                             <tr>
-                                <td><?php echo $row["titulo"] ?></td> 
+                                <td class="coll-titulo"><?php echo $row["titulo"] ?></td> 
                                 <td><?php echo $row["post"] ?></td> 
                                 <td class="coll-creacion"><?php echo $row["nombre_categoria"] ?></td> 
-                                <td class="coll-creacion"><?php echo $row["fecha_publicacion"] ?></td> 
+                                <td class="coll-creacion"><?php echo date("d/m/Y", strtotime($row["fecha_publicacion"])) ?></td> 
                                 <td>
                                     <a href="./paginaprincipaleditar.php?id=<?php echo $row["id_post"] ?>" class="editar btn btn-secondary">
                                         <i class="fa-solid fa-pencil"></i>

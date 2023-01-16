@@ -440,6 +440,14 @@ td {
     margin-bottom: 5px;
 }
 
+.coll-creacion{
+    width: 7%;
+}
+
+.coll-titulo{
+    width: 20%;
+}
+
 /*media queries*/
 @media (max-width: 640px) {
     .menu {
