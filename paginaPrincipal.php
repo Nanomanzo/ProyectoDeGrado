@@ -38,7 +38,7 @@
                         ?>
                     </div>
                     <textarea name="post" rows="2" placeholder="Descripcion" autocomplete="off"></textarea>
-                    <input type="submit" name="guardarPost" value="Guardar tarea">
+                    <input type="submit" name="guardarPost" value="Guardar">
                         
                 </form>
             </div>

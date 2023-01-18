@@ -30,10 +30,7 @@
                     $tipoMensaje = "alert-danger";
                     header("Location: index.php?message=" . $message . "&class=" . $tipoMensaje);
                 }
+            }
         }
-        }
-
-
-
       }
 ?>

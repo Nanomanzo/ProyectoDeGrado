@@ -23,7 +23,7 @@
                 $message = "el usuario no ha sido crerado";
             }
         } catch (PDOException $e) {
-            $message = "usuario excistente";
+            $message = $e;
         }
 
 

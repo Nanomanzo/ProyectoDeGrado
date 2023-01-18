@@ -5,8 +5,6 @@ let confirmPassword = document.querySelector("#confirm_password")
 let enviarformRegistrarse = document.querySelector("#enviar-formRegistrarse")
 
 
-
-
                                                          /*Menu desplegable para movil*/
 menuHamburguesa.addEventListener("click", toggleBurguerMenu);
 // ocultamos o mostramos el menu de movil segun sea conveniente
@@ -15,9 +13,6 @@ function toggleBurguerMenu() {
     // eliminamos el scroll para que no le sea posible al usuario desplazarce si el menu crece mas de la cuenta
     document.body.style.overflow = (document.body.style.overflow === "hidden") ? "" : "hidden";
 }
-
-
-
 
 
                                                          /*Validar el formulario de registro*/
@@ -87,9 +82,6 @@ if (location.pathname === '/ProyectoDeGrado/formRegistarse.php' || location.path
         }
   } 
 }
-
-
-
 
 
                                                          /*Modo Oscuro*/
