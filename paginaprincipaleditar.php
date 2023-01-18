@@ -50,10 +50,10 @@
     <div>
         <form action="paginaprincipaleditar.php?id_post=<?php echo $_GET["id_post"]?>" method="POST">
                 <div class="form-group">
-                <input type="text" name="titulo" value="<?php echo $titulo;?>" class="form-control mb-3" placeholder="Actualiza el titulo">
+                <input type="text" name="titulo" value="<?php echo $titulo;?>" class="mb-3" placeholder="Actualiza el titulo">
             </div>
             <div class="form-group"> 
-                <textarea name="post" rows="10" class="form-control mb-3" placeholder="Actualiza la descripcion"><?php echo $post; ?></textarea>
+                <textarea name="post" rows="10"  placeholder="Actualiza la descripcion"><?php echo $post; ?></textarea>
             </div>
             <input type="submit" name="update" value="Actualizar">
         </form>
