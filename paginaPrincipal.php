@@ -75,7 +75,7 @@
                                 <td class="coll-creacion"><?php echo $row["nombre_categoria"] ?></td> 
                                 <td class="coll-creacion"><?php echo date("d/m/Y", strtotime($row["fecha_publicacion"])) ?></td> 
                                 <td>
-                                    <a href="./paginaprincipaleditar.php?id=<?php echo $row["id_post"] ?>" class="editar btn btn-secondary">
+                                    <a href="./paginaprincipaleditar.php?id_post=<?php echo $row["id_post"] ?>" class="editar btn btn-secondary">
                                         <i class="fa-solid fa-pencil"></i>
                                     </a>
                                     <a href="./paginaprincipaleliminar.php?id_post=<?php echo $row["id_post"] ?>" class="btn btn-danger">
