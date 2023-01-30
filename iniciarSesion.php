@@ -8,7 +8,7 @@
     require "./conexion.php";
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
-        $records = $conn->prepare('SELECT id_usuario, email, password FROM usuarios WHERE email = :email');
+        $records = $conn->prepare('SELECT id_usuario, email, password, nickname FROM usuarios WHERE email = :email');
         $records->bindParam(':email', $_POST['email']);
         $records->execute();
         $results = $records->fetch(PDO::FETCH_ASSOC);
@@ -22,7 +22,8 @@
         } else {
             if (!empty($results)) {
                 if ( count($results) > 0 && password_verify($_POST['password'], $results['password'])  ) {
-                    $_SESSION['user_id'] = $results['id_usuario'];
+                    $_SESSION['user_id'] = $results['id_usuario'];                    
+                    $_SESSION['nickname'] = $results['nickname'];
                     header('Location: /ProyectoDeGrado/paginaPrincipal.php'); 
                     $message = 'usuario encontrado'; 
                 } else {

@@ -11,7 +11,7 @@
 <div class="contenedorprincipal-paginaprincipal">
     <div class="row" >
         <div class="col-md-12 contenedorFormulario-paginaPrincipal" id="1">
-
+            <h2>Hola <?=$_SESSION["nickname"] ?>, ¿que has aprendido hoy?</h2>
             <?php if (isset($_SESSION["message"])) {?>
                 <div class="alert alert-<?=$_SESSION["message_type"] ?> alert-dismissible fade show" role="alert">
                     <?= $_SESSION["message"] ?>
