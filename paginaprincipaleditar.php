@@ -44,7 +44,7 @@
         $stmt->execute();
 
         // Almacenar un mensaje de éxito en la sesión
-        $_SESSION["message"] = "Tarea actualizada";
+        $_SESSION["message"] = "Post actualizado";
         $_SESSION["message_type"] = "success"; 
         // Redirigir a la página principal
         header("Location: paginaPrincipal.php");
