@@ -1,4 +1,5 @@
 <?php 
+    //incluimos los archivos necesarios para que funcione
     require "./conexion.php";
     require "./includes/header.php";
     require "./registrarUsuario.php";
@@ -9,14 +10,17 @@
         $message = "";
     }
 ?>
-
+<!-- Contenedor principal para el formulario de registro -->
 <div class="contenedorPrincipal-formRegistrarse">
+    <!-- Verifica si existe un mensaje -->
     <?php 
         if (!empty($message)):?>
             <p class="alert alert-danger mensaje"><?= $message?></p>
     <?php endif; ?>
+    <!-- Título del formulario -->
     <h1>Registarte</h1>
     <span>o <a href="./index.php">Inicia Sesión</a></span>
+    <!-- Formulario de registro -->
     <form class="formRegistrarse needs-validation" action="./formRegistarse.php" method="post" novalidate>
         <div>
             <input type="text" name="nombre" placeholder="Ingrese su nombre" autocomplete="off" required>
